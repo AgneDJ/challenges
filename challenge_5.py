@@ -9,8 +9,14 @@ class Solution(object):
         empty_list = []
 
         s = str(s)
-        for ch in s:
-            for dict_ch in roman_dict:
-                if ch == dict_ch:
-                    empty_list.append(roman_dict[dict_ch])
+        empty_list = []
+        length = len(s)
+
+        for i in range(length):
+            current_value = roman_dict[s[i]]
+            if i < length - 1 and current_value < roman_dict[s[i + 1]]:
+                empty_list.append(-current_value)
+            else:
+                empty_list.append(current_value)
+
         return sum(empty_list)
