@@ -19,7 +19,7 @@ class Solution(object):
         dummy_node = ListNode(0)  # also head
         tail = dummy_node
 
-        while list1 and list2:
+        while list1 != None and list2 != None:
             if list1.val < list2.val:
                 tail.next = list1
                 list1 = list1.next
