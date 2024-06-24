@@ -9,7 +9,7 @@ class Solution(object):
         # output 2
         # in 2 out 1
         # in 8 out 2
-
+        # root = 0.5 * (X + (N / X))
         if x == 0:
             return 0
 
