@@ -16,7 +16,7 @@ class Solution(object):
 
         # ehile current node is not empty and the one after this one
 
-        while current != 0 and current.next != 0:
+        while current != None and current.next != None:
             if current.val == current.next.val:  # if current node value = next one, then skipping this node and then next one is the one after the next one now
                 current.next = current.next.next
             else:
