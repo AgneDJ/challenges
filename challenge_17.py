@@ -10,12 +10,17 @@ class Solution(object):
         :rtype: ListNode
         """
 
+        # sorted linked list
+        # currentnode is ahead
         current = head
 
-        while current and current.next:
-            if current.val == current.next.val:
+        # ehile current node is not empty and the one after this one
+
+        while current != 0 and current.next != 0:
+            if current.val == current.next.val:  # if current node value = next one, then skipping this node and then next one is the one after the next one now
                 current.next = current.next.next
             else:
+                # otherwise, current node equals next node now, and proceeding to the next node
                 current = current.next
 
-        return head
+        return head  # retun new head after duplicates are removed
