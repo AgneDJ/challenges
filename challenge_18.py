@@ -14,8 +14,8 @@ class Solution(object):
         :rtype: None Do not return anything, modify nums1 in-place instead.
         """
 
-        p1 = m - 1
-        p2 = n - 1
+        p1 = m - 1  # last member of the first array
+        p2 = n - 1  # last member of the second array
         p = m + n - 1
 
         while p1 >= 0 and p2 >= 0:
